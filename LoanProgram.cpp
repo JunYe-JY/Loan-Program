@@ -9,7 +9,7 @@ struct user_input {
     float duration;
 };
 
-user_input get_input(void) {
+user_input get_input() {
     user_input input;
     cout << "Please enter the annual interest rate as percentage (e.g., 15 for "
     "15%) (enter 0 to quit): ";
@@ -29,8 +29,7 @@ user_input get_input(void) {
 
 float calculate_loan(user_input input) {
     float amount_received;
-    amount_received =
-    (input.amount_dollar) / (1 - (input.interest_rate * input.duration));
+    amount_received = (input.amount_dollar) / (1 - (input.interest_rate * input.duration));
     
     return amount_received;
 }
